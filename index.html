@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首爾小灶 SEOUL BITE | 一人份道地韓食微型體驗</title>
+  <!-- Tailwind CSS CDN for modern responsive UI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#D32F2F',
+              orange: '#E65100',
+              accent: '#FF7043',
+              dark: '#212121',
+              cream: '#FFFDF9',
+              warmgray: '#F5F2EB'
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FFFDF9;
+      color: #2D3748;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .hero-badge {
+      background: linear-gradient(135deg, #FF7043, #D32F2F);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 24px -6px rgba(211, 47, 47, 0.15);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-accent selection:text-white">
+
+  <!-- 頂部導覽列 -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-orange-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl">🍲</span>
+        <span class="font-display font-black text-xl tracking-tight text-gray-900">首爾小灶 <span class="text-brand-red text-sm font-semibold tracking-wider uppercase ml-1">Seoul Bite</span></span>
+      </div>
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+        <a href="#about" class="hover:text-brand-red transition">品牌故事</a>
+        <a href="#theory" class="hover:text-brand-red transition">學理分析 (SOP)</a>
+        <a href="#products" class="hover:text-brand-red transition">嚴選料理</a>
+        <a href="#order" class="bg-brand-red text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 transition shadow-md shadow-red-200">立即預購</a>
+      </div>
+      <div class="md:hidden">
+        <a href="#order" class="bg-brand-red text-white text-xs px-3 py-1.5 rounded-full font-semibold">快速預購</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero 英雄主視覺區塊 -->
+  <header class="relative overflow-hidden pt-12 pb-20 bg-gradient-to-b from-orange-50/60 to-brand-cream border-b border-orange-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100/80 text-brand-orange text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
+        <span>🇰🇷 100% 個人微型創業示範專案</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+        <span>凌政文教授行銷 SOP 嚴謹遵循</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight max-w-3xl mx-auto mb-6">
+        一人獨享也能道地！<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-brand-orange to-red-600">
+          3 分鐘還原首爾街頭溫暖香氣
+        </span>
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+        誰說想吃韓食一定要呼朋引伴點整鍋？《首爾小灶》專注為小資族與大學生打造無負擔、一人份真空保鮮即食調理包與現做道地香油手作飯捲，讓你隨時在宿舍、套房享受最道地的私廚美味。
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#products" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-red text-white font-bold text-base shadow-lg shadow-red-500/25 hover:bg-red-700 transition text-center">
+          探索明星商品目錄
+        </a>
+        <a href="#theory" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-gray-700 font-bold text-base border border-gray-200 hover:bg-orange-50/50 transition text-center">
+          檢視期中學理分析矩陣
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 品牌痛點與創業動機 (步驟 1) -->
+  <section id="about" class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Problem & Origin</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">三大痛點發掘與創業緣起</h2>
+        <p class="text-gray-500 text-sm mt-2">擺脫傳統餐飲重資產包袱，鎖定一人食高頻剛需市場</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-orange-50/40 p-6 rounded-2xl border border-orange-100/60 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-red-100 text-brand-red flex items-center justify-center text-xl mb-4 font-black">1</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">一人用餐難以開鍋與客單偏高</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            市售韓式餐廳往往以大鍋部隊鍋、烤肉為主，客單價動輒 300~500 元以上，單身族或學生想解饞卻面臨份量過大、價格高昂的社交與消費門檻。
+          </p>
+        </div>
+
+        <div class="bg-orange-50/40 p-6 rounded-2xl border border-orange-100/60 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center text-xl mb-4 font-black">2</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">市售進口包化學添加且口味偏甜</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            量販賣場進口之大包裝半成品多加入大量防腐劑與人工甜味劑，難以還原韓國傳統老饕鍾愛的「梨汁自然發酵甘醇」與「純芝麻油現刷濃香」。
+          </p>
+        </div>
+
+        <div class="bg-orange-50/40 p-6 rounded-2xl border border-orange-100/60 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4 font-black">3</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">冷鏈運費門檻與外送餐點冷硬</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            外送平台抽成高、送達後海苔軟化且飯體冰涼；冷凍宅配單趟運費高達 160~200 元。首爾小灶透過「校園自取點 + 快速低溫即食封口」，將物流成本降至最低。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 行銷學理五大階段期中實踐矩陣 (步驟 2~5) -->
+  <section id="theory" class="py-16 bg-brand-warmgray border-b border-orange-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Academic Framework</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">經典行銷學理深度分析 (PESTC × SWOT × SMART)</h2>
+        <p class="text-gray-500 text-sm mt-2">嚴謹遵循凌政文教授《行銷企劃》期中評量邊界指引</p>
+      </div>
+
+      <!-- PESTC 總體環境掃描 -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 mb-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <span class="text-brand-orange">●</span> 步驟 2：外部總體環境 PESTC 深度分析
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm">
+          <div class="p-4 rounded-xl bg-orange-50/30 border border-orange-100">
+            <span class="font-bold text-brand-red block mb-1">P (政治法律)</span>
+            <p class="text-gray-600 text-xs leading-relaxed">衛福部食品良好衛生規範 (GHP) 落實，透明標示成分與原產地，建立消費者對微型手作信任。</p>
+          </div>
+          <div class="p-4 rounded-xl bg-orange-50/30 border border-orange-100">
+            <span class="font-bold text-brand-red block mb-1">E (經濟環境)</span>
+            <p class="text-gray-600 text-xs leading-relaxed">百元銅板價即可享受韓式道地風味，具抗通膨「口紅效應」，校園自取省下高昂外送平台運費。</p>
+          </div>
+          <div class="p-4 rounded-xl bg-orange-50/30 border border-orange-100">
+            <span class="font-bold text-brand-red block mb-1">S (社會文化)</span>
+            <p class="text-gray-600 text-xs leading-relaxed">K-Pop 與韓劇風靡全台年輕世代，「追劇配韓食」成為大學生與小資族日常必備之儀式感。</p>
+          </div>
+          <div class="p-4 rounded-xl bg-orange-50/30 border border-orange-100">
+            <span class="font-bold text-brand-red block mb-1">T (科技創新)</span>
+            <p class="text-gray-600 text-xs leading-relaxed">家用型高阻隔食品真空機與低溫滅菌技術成熟，個人微型廚房亦能達成 100% 潔淨保鮮封裝。</p>
+          </div>
+          <div class="p-4 rounded-xl bg-orange-50/30 border border-orange-100">
+            <span class="font-bold text-brand-red block mb-1">C (綠色環保)</span>
+            <p class="text-gray-600 text-xs leading-relaxed">優先選用台灣在地大甲白米、雲林在地鮮蒜與在地良質甘藍，縮短食材運輸里程，落實永續。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SWOT 因果推論四象限四部曲 -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 mb-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <span class="text-brand-orange">●</span> 步驟 3 & 4：內部盤點、假想敵防護與 SWOT 四部曲矩陣
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div class="p-5 rounded-xl bg-red-50/30 border border-red-100">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-brand-red text-base">SO 積極開拓策略 (優勢 × 機會)</span>
+              <span class="text-xs bg-red-100 text-brand-red px-2 py-0.5 rounded-full font-semibold">首選進攻</span>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-xs">
+              發揮手工純粹現炒韓醬與手刷初榨芝麻油的極致香氣，搭乘韓劇話題熱潮，主打「百元追劇必吃一人份飯捲」，迅速引爆校園人際圈與 Dcard 推薦效應。
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-orange-50/30 border border-orange-100">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-brand-orange text-base">WO 借力補強策略 (劣勢 × 機會)</span>
+              <span class="text-xs bg-orange-100 text-brand-orange px-2 py-0.5 rounded-full font-semibold">產能轉化</span>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-xs">
+              面對初期單人作業產能上限，全面採取「每週二、四限量預訂自取制」，將產能有限劣勢包裝轉化為「極致新鮮手工限量」之稀缺價值，避免食材報廢。
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-blue-50/30 border border-blue-100">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-blue-800 text-base">ST 防禦轉化策略 (優勢 × 威脅)</span>
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-semibold">護城河構築</span>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-xs">
+              面對量販進口半成品低價競爭（假想敵），堅守「不加一滴防腐劑」與「蘋果水梨手磨自然發酵」品質壁壘，以透明食材履歷擊敗工業量產工廠貨。
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-stone-50/60 border border-stone-200">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-stone-800 text-base">WT 避險聚焦策略 (劣勢 × 威脅)</span>
+              <span class="text-xs bg-stone-200 text-stone-700 px-2 py-0.5 rounded-full font-semibold">精實控險</span>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-xs">
+              嚴格控制初期採購預算在 3 萬元內，不做重資產店面租賃，聚焦於 3 款爆款核心單品（飯捲、泡菜、年糕包），保證每一批備料高周轉與零呆滯庫存。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMART 目標與三超前瞻思維 -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <span class="text-brand-orange">●</span> 步驟 5：SMART 企劃目標與「三超」前瞻思維
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <h4 class="font-bold text-gray-800 mb-2">📌 SMART 量化驗證目標 (30 天期中試行)</h4>
+            <ul class="space-y-1.5 text-xs text-gray-600">
+              <li><strong class="text-gray-900">S (具體)：</strong> 完成 GitHub Pages 線上展示型錄並上線 3 款微型韓食產品。</li>
+              <li><strong class="text-gray-900">M (可衡量)：</strong> 30 天內獲得 250 次真實網站點擊，並收集 35 筆預購登記。</li>
+              <li><strong class="text-gray-900">A (可達成)：</strong> 透過校內社群、好友 Line 群與系學會推廣，門檻穩健可行。</li>
+              <li><strong class="text-gray-900">R (相關性)：</strong> 驗證學生市場對百元一人份道地韓食之剛性需求。</li>
+              <li><strong class="text-gray-900">T (時限)：</strong> 於期中第八週前完成 GitHub 部署與 Google 表單串接。</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 mb-2">🚀 三超前瞻思維實踐</h4>
+            <ul class="space-y-2 text-xs text-gray-600">
+              <li><span class="font-bold text-brand-orange">【超前意識】：</span> 以小批量飯捲與即食包試水溫，提早卡位單人經濟與小資外帶熱潮。</li>
+              <li><span class="font-bold text-brand-orange">【超越常規】：</span> 打破韓式料理「開大火大鍋煮」刻板印象，研發3分鐘微波/電鍋即享配方。</li>
+              <li><span class="font-bold text-brand-orange">【超越期望】：</span> 隨餐附贈手繪「韓文日常溫暖祝福小卡」與韓式香油滴管包，驚艷顧客。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 明星商品櫥窗 (步驟 6：STP 與 4P) -->
+  <section id="products" class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Our Specialties</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mt-1">4P 產品組合：三大明星商品展售</h2>
+        <p class="text-gray-500 text-sm mt-2">嚴選韓國進口芝麻油與道地辣醬，小批量純手工用心調製</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 商品 A -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-amber-500 to-orange-400 flex items-center justify-center text-6xl shadow-inner">
+              🍙
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-xs font-bold text-brand-orange bg-orange-50 px-2.5 py-1 rounded-full">主打現做</span>
+                <span class="text-xs text-gray-400">當日手工捲製</span>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-1">【經典麻香】韓式手作海苔飯捲</h3>
+              <p class="text-gray-500 text-xs mb-4">Classic Korean Kimbap</p>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                嚴選特級台灣壽司米刷滿正宗韓國不倒翁純芝麻油，包覆特醃韓式醬燒雪花牛、黃金脆醃蘿蔔、爽脆牛蒡絲與鮮甜菠菜，每一口都是道地首爾廣藏市場香氣。
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 bg-gray-50 p-3 rounded-lg mb-4">
+                <div>規格：約 280g / 條（已切片盒裝）</div>
+                <div>特色：常溫可直接食用，附防潮海苔獨立包裝</div>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-400 line-through">NT$ 130</span>
+              <div class="text-2xl font-black text-brand-red">NT$ 110</div>
+            </div>
+            <a href="#order" class="px-4 py-2 bg-brand-red hover:bg-red-700 text-white rounded-xl text-xs font-bold transition">搶先預購</a>
+          </div>
+        </div>
+
+        <!-- 商品 B -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-red-600 to-rose-400 flex items-center justify-center text-6xl shadow-inner">
+              🥬
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-xs font-bold text-brand-red bg-red-50 px-2.5 py-1 rounded-full">手工天然酵釀</span>
+                <span class="text-xs text-gray-400">冷藏密封保鮮</span>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-1">【天然果釀】極鮮手工熟成泡菜</h3>
+              <p class="text-gray-500 text-xs mb-4">Artisanal Fruit-Fermented Kimchi</p>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                拒絕化學糖精與防腐劑！堅持使用新鮮富士蘋果與水梨磨泥發酵，搭配韓國進口粗辣椒粉與野生小蝦醬，酸香甘甜且爽脆無比，開胃解膩第一名。
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 bg-gray-50 p-3 rounded-lg mb-4">
+                <div>規格：350g 真空玻璃罐裝</div>
+                <div>特色：活性益生菌，冷藏可保存 45 天</div>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-400 line-through">NT$ 190</span>
+              <div class="text-2xl font-black text-brand-red">NT$ 160</div>
+            </div>
+            <a href="#order" class="px-4 py-2 bg-brand-red hover:bg-red-700 text-white rounded-xl text-xs font-bold transition">搶先預購</a>
+          </div>
+        </div>
+
+        <!-- 商品 C -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-6xl shadow-inner">
+              🍲
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full">獨享 3 分鐘速煮</span>
+                <span class="text-xs text-gray-400">一人份真空包</span>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-1">【首爾街頭】辣炒年糕 DIY 獨享包</h3>
+              <p class="text-gray-500 text-xs mb-4">Seoul Street Tteokbokki Pack</p>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                一人住外面的宵夜救星！內含特製Q彈純米條、韓國釜山薄魚板片、以及主廚秘釀黃金甜辣醬。免退冰、加半碗水煮滾 3 分鐘，即可輕鬆享受牽絲韓味。
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 bg-gray-50 p-3 rounded-lg mb-4">
+                <div>規格：260g 一人份真空料理包</div>
+                <div>特色：常溫/微冷藏保存，電磁爐/微波皆可煮</div>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-gray-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-gray-400 line-through">NT$ 150</span>
+              <div class="text-2xl font-black text-brand-red">NT$ 130</div>
+            </div>
+            <a href="#order" class="px-4 py-2 bg-brand-red hover:bg-red-700 text-white rounded-xl text-xs font-bold transition">搶先預購</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 優惠組合促銷 -->
+      <div class="mt-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
+        <div>
+          <span class="bg-white/20 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">期中限定特別優惠</span>
+          <h3 class="text-xl sm:text-2xl font-black mt-2">【首爾狂熱】一人吃飽飽三件體驗組</h3>
+          <p class="text-white/80 text-sm mt-1">手作飯捲 1 盒 + 手工熟成泡菜 1 罐 + 辣炒年糕 DIY 包 1 份</p>
+        </div>
+        <div class="mt-4 md:mt-0 flex items-center gap-4">
+          <div class="text-right">
+            <span class="text-xs text-white/70 line-through">原價 NT$ 400</span>
+            <div class="text-3xl font-black text-yellow-300">特惠 NT$ 369</div>
+          </div>
+          <a href="#order" class="px-6 py-3 bg-white text-brand-red font-bold rounded-xl hover:bg-yellow-100 transition shadow-md">立即搶購</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 線上預購登記表單 (模擬串接 Google 表單) -->
+  <section id="order" class="py-16 bg-brand-cream border-b border-orange-100">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-orange-100 text-center">
+        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest">Pre-Order Registration</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mt-1 mb-2">線上試吃預購意向登記</h2>
+        <p class="text-gray-500 text-sm mb-8">本專案為微型創業 MVP 驗證，填寫即享校園免運與第一批新鮮出爐優先保留名額！</p>
+
+        <form id="preorderForm" onsubmit="handlePreorder(event)" class="text-left space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">您的姓名 / 暱稱 *</label>
+            <input type="text" required placeholder="例如：王小明" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-red/50 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">聯絡電話 / Line ID *</label>
+            <input type="text" required placeholder="0912-345-678 或 Line ID" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-red/50 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">感興趣的料理組合 *</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-red/50 text-sm bg-white">
+              <option value="combo">【推薦首選】首爾狂熱一人吃飽三件組 (NT$ 369)</option>
+              <option value="kimbap">【經典麻香】韓式手作海苔飯捲 (NT$ 110)</option>
+              <option value="kimchi">【天然果釀】極鮮手工熟成泡菜 (NT$ 160)</option>
+              <option value="tteok">【首爾街頭】辣炒年糕 DIY 獨享包 (NT$ 130)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">取件偏好方式</label>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-orange-50/30">
+                <input type="radio" name="delivery" checked class="text-brand-red focus:ring-0">
+                <span>校園面交自取 (0 元)</span>
+              </label>
+              <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-orange-50/30">
+                <input type="radio" name="delivery" class="text-brand-red focus:ring-0">
+                <span>超商取貨 (+60 元)</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">備註 / 口味偏好 (選填)</label>
+            <textarea rows="2" placeholder="例如：泡菜希望微辣、預計下週取餐" class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-red/50 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3.5 bg-brand-red hover:bg-red-700 text-white font-bold rounded-xl text-base shadow-lg shadow-red-500/25 transition mt-4">
+            確認送出預購登記意向 🚀
+          </button>
+        </form>
+
+        <div id="successMsg" class="hidden mt-6 p-4 bg-green-50 border border-green-200 text-green-800 rounded-2xl text-sm">
+          🎉 感謝您的支持！您的預購意向已成功登記，創辦人將於 24 小時內透過 Line 與您確認取餐細節！
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="bg-gray-900 text-gray-400 py-12 text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <div class="text-white font-display font-bold text-lg">🍲 首爾小灶 SEOUL BITE</div>
+      <p class="text-xs text-gray-400 max-w-md mx-auto">
+        萬能科技大學《創意發想與實踐》（11501）期中報告示範專案<br>
+        指導教師：邱俊維 博士 ｜ 實踐模式：100% 個人微型創業專案
+      </p>
+      <div class="pt-4 text-xs text-gray-500">
+        &copy; 2026 首爾小灶 SEOUL BITE. All Rights Reserved. Built with Google Antigravity & Hosted on GitHub Pages.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handlePreorder(e) {
+      e.preventDefault();
+      document.getElementById('preorderForm').classList.add('opacity-50', 'pointer-events-none');
+      document.getElementById('successMsg').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
